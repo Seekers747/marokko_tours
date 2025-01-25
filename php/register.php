@@ -50,23 +50,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <form method="POST">
                     <div class="row g-2 mb-3">
                         <div class="col">
-                            <input type="text" class="form-control" id="first_name" name="first_name" placeholder="First Name" required>
+                            <label for="first_name" class="form-label">First Name:</label>
+                            <input type="text" class="form-control" id="first_name" name="first_name" placeholder="John" required>
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Last Name" required>
+                            <label for="last_name" class="form-label">Last Name:</label>
+                            <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Doe" required>
                         </div>
                     </div>
 
                     <div class="mb-3">
-                        <input type="email" class="form-control" id="email" name="email" placeholder="email" required>
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
                     </div>
 
                     <div class="mb-3">
-                        <input type="password" class="form-control" id="password" name="password" placeholder="password" required>
+                        <label for="password" class="form-label">Password:</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="******" required>
                     </div>
 
                     <div class="mb-3">
-                        <input type="tel" class="form-control" id="phone_number" name="phone_number" placeholder="phone Number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
+                        <label for="phone_number" class="form-label">Phone Number:</label>
+                        <input type="tel" class="form-control" id="phone_number" name="phone_number" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
                     </div>
 
                     <div class="form-check mb-3">

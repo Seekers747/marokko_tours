@@ -11,24 +11,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <script src="../../javascript/general.js"></script>
 </head>
 <body>
     <nav class="navbar-adjustment">
         <p>Website logo/name</p>
-        <ul class="nav nav-pills">
+        <ul class="nav nav-pills nav-spacing">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                <a class="nav-link button-nav-active button-nav" aria-current="page" href="home.html">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="over-ons.html">About us</a>
+                <a class="nav-link button-nav" href="over-ons.html">About us</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="hoe-het-werkt.html">How it works</a>
+                <a class="nav-link button-nav" href="hoe-het-werkt.html">How it works</a>
             </li>
         </ul>
         <div class="log-reg">
-            <button type="button" class="btn btn-primary"><a href="../../php/login.php" class="login-button">Login</a></button>
-            <button type="button" class="btn btn-primary"><a href="../../php/register.php" class="signup-button">Sign up</a></button>
+            <button type="button" class="btn button-nav-active button-nav"><a href="../../php/login.php" class="login-button">Login</a></button>
+            <button type="button" class="btn button-nav-active button-nav"><a href="../../php/register.php" class="signup-button">Sign up</a></button>
         </div>
     </nav>
     <div class="images-box">
@@ -40,20 +41,23 @@
         <div class="emptyspace" style="height: 50px;"></div>
         <h1>Introduction</h1>
         <div class="introduction">
-            <p>Welcome to [Your Company Name] – Your Guide to Authentic Morocco</p>
-            <p>the magic of Morocco with our carefully curated tours! From the golden sands of the Sahara to the bustling souks of Marrakech and from the serene Atlas Mountains to historic cities filled with culture and charm – Morocco offers everything your heart desires.</p>
-            <p>Our tours are designed to let you experience the real Morocco. Savor the rich flavors of Moroccan cuisine, wander through ancient medinas,</p>
-            <p>and immerse yourself in the warm hospitality of the local people. Whether you're seeking adventure, culture, relaxation, or a combination of it all, we have the perfect journey for you.</p>
-            <p>Why choose us?</p>
-            <p>✔ Personal attention: Small groups and flexible itineraries tailored to your wishes.</p>
-            <p>✔ Authentic experiences: Local guides and unique activities away from mass tourism.</p>
-            <p>✔ Sustainable travel: We respect nature and support local communities.</p>
+            <h2>Welcome to [Your Company Name] - Your Guide to Authentic Morocco</h2>
+            <p>Discover the magic of Morocco with our carefully curated tours! From the golden sands of the Sahara to the bustling souks of Marrakech and from the serene Atlas Mountains to historic cities filled with culture and charm - Morocco offers everything your heart desires.</p>
+            <p>Our tours are designed to let you experience the real Morocco. Savor the rich flavors of Moroccan cuisine, wander through ancient medinas, and immerse yourself in the warm hospitality of the local people.</p>
+            <p>Whether you're seeking adventure, culture, relaxation, or a combination of it all, we have the perfect journey for you.</p>
+            <h2>Why choose us?</h2>
+            <ul>
+                <li>✔ Personal attention: Small groups and flexible itineraries tailored to your wishes.</li>
+                <li>✔ Authentic experiences: Local guides and unique activities away from mass tourism.</li>
+                <li>✔ Sustainable travel: We respect nature and support local communities.</li>
+            </ul>
             <p>Let us take you on an unforgettable journey through this enchanting country. Discover Morocco like never before!</p>
             <p>Start planning your dream trip today and let the adventure begin!</p>
+            <a class="cta-btn" onclick="scrollToDaytrips()">Start Your Journey</a>
         </div>
         <div class="emptyspace" style="height: 100px;"></div>
 
-        <h1>Daytrips</h1>
+        <h1 id="Daytrips">Daytrips</h1>
         <div class="daytrips">
             <div class="emptyspace" style="height: 15px;"></div>
             <div class="daytrip">
