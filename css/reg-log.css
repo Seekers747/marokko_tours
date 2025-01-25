@@ -8,8 +8,8 @@ body {
 .body_for_form {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    position: relative;
+    top: 7%;
 }
 
 .form-box {
@@ -23,10 +23,4 @@ body {
 .form-box h2 {
     text-align: center;
     margin-bottom: 20px;
-}
-
-.login-button, .signup-button {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
 }

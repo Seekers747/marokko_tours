@@ -1,7 +1,3 @@
-html {
-    scroll-behavior: smooth;
-}
-
 .images-box {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
