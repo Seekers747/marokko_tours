@@ -14,7 +14,7 @@ class User
     public function registerUser($first_name, $last_name, $email, $password, $phone_number)
     {
         $password_hash = password_hash($password, PASSWORD_DEFAULT);
-        $sql = "INSERT INTO users (first_name, last_name, email, password_hash, phone_number) VALUES (:first_name, :last_name, :email, :password_hash, :phone_number)";
+        $sql = "INSERT INTO user_info (first_name, last_name, email, password_hash, phone_number) VALUES (:first_name, :last_name, :email, :password_hash, :phone_number)";
         $placeholder = ["first_name" => $first_name, "last_name" => $last_name, "email" => $email, "password_hash" => $password_hash, "phone_number" => $phone_number];
         return $this->pdo->run($sql, $placeholder);
     }
@@ -22,7 +22,7 @@ class User
     public function loginUser($email, $password) {
         session_start();
 
-        $sql = "SELECT password FROM users WHERE email = ?";
+        $sql = "SELECT password_hash FROM user_info WHERE email = ?";
         $stored_info = $this->pdo->run($sql, [$email])->fetch();
 
         if (!$stored_info) {
