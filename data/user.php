@@ -22,20 +22,22 @@ class User
     public function loginUser($email, $password) {
         session_start();
 
-        $sql = "SELECT password_hash FROM user_info WHERE email = ?";
+        $sql = "SELECT * FROM user_info WHERE email = ?";
         $stored_info = $this->pdo->run($sql, [$email])->fetch();
 
         if (!$stored_info) {
             echo "Email bestaat niet!";
             return;
-        } else {
-            echo "<p class='popUp'>Login successful!</p>";
-            header("refresh:3, url = dashboard.php");
-        }
-
-        if (password_verify($password, $stored_info['password_hash'])) {
+        } elseif (password_verify($password, $stored_info['password_hash'])) {
+            $_SESSION['user_id'] = $stored_info['user_id'];
+            $_SESSION['first_name'] = $stored_info['first_name'];
+            $_SESSION['last_name'] = $stored_info['last_name'];
             $_SESSION['email'] = $email;
             $_SESSION['password_hash'] = $stored_info['password_hash'];
+            echo "<p class='popUp'>Login successful!</p>";
+            header("refresh:3, url = dashboard.php");
+        } else {
+            echo "<p class='redPopUp'>Password is incorrect!</p>";
         }
     }
 
@@ -43,7 +45,7 @@ class User
     {
         session_unset();
         session_destroy();
-        header("../Pagina/login-user.php");
+        header("Location: ../Pagina/login-user.php");
     }
 
     // public function editUser($voornaam, $achternaam, $telefoonnummer, $geboortedatum, $email)

@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     try {
         $user = new User();
         $user->loginUser($_POST['email'], $_POST['password']);
-        header("refresh:3; url = login.php");
+        header("refresh:3; url = dashboard.php");
     } catch (\Exception $e) {
         echo $e->getMessage();
     }
