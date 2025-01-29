@@ -109,7 +109,7 @@
     color: black;
 }
 
-.login-button, .signup-button {
+.login-button, .signup-button, .logout-button {
     color: black;
     text-decoration: none;
     font-weight: bold;
